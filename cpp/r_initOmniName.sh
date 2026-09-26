@@ -1,2 +1,2 @@
 export OMNINAMES_LOGDIR=/tmp
-omniNames -start 2809
+omniNames -start 1209

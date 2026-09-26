@@ -11,7 +11,7 @@ rm -rf *
 if cmake ..; then
     if make; then
         clear
-        ./exec -ORBInitRef NameService=corbaloc::localhost:2809/NameService
+        ./exec -ORBInitRef NameService=corbaloc::localhost:1209/NameService
     else 
         echo "Erreur lors du MAKE"
     fi
