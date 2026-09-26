@@ -1,0 +1,15 @@
+module Ecole {
+    
+    struct InfoEtudiant {
+        long num;
+        string nom;
+        string prenom;
+    };
+
+    interface Etudiant {
+        void creerEtudiant(in InfoEtudiant e);
+        void supprimerEtudiant(in long num);
+        InfoEtudiant recupererEtudiant(in long num);
+    };
+
+};
