@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.30.5)
 
-project(CORBA)
+project(CPP-SERVEUR)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
