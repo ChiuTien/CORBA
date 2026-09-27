@@ -11,9 +11,12 @@ find_library(MYSQL_CPPCONN_LIB NAMES mysqlcppconn mysqlcppconn8 REQUIRED)
 
 set(HEADERS
     ../generated/Ecole.hh
+    include/EtudiantDao.h
     include/DatabaserManager.h)
 
 set(SOURCES
+    ../generated/EcoleSK.cc
+    src/EtudiantDao.cpp
     src/DatabaseManager.cpp
     main.cpp)
 

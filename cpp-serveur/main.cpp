@@ -5,12 +5,24 @@
 
 #include "./include/DatabaseManager.h"
 
+#include "./include/EtudiantDao.h"
+
 #include <iostream>
 
 void lancementServeur(int argc, char* argv[]);
 
 int main(int argc, char* argv[]) {
-    std::cout << "HELLO WORLD !" << std::endl;
+
+    EtudiantDao* etu = new EtudiantDao();
+
+    Ecole::InfoEtudiant info;
+    info.nom = CORBA::string_dup("CHIU TIEN");
+    info.prenom = CORBA::string_dup("MANDRESY CHRISTIAN");
+
+    etu->supprimerEtudiant(1);
+
+    delete etu;
+
     return 0;
 }
 

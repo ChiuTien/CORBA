@@ -129,6 +129,30 @@ exec/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/build
 .PHONY : exec/fast
 
+home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.o: home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
+.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.o
+
+# target to build an object file
+home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
+.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
+
+home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.i: home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
+.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.i
+
+# target to preprocess a source file
+home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
+.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
+
+home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.s: home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
+.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.s
+
+# target to generate assembly for a file
+home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
+.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -177,6 +201,30 @@ src/DatabaseManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/DatabaseManager.cpp.s
 .PHONY : src/DatabaseManager.cpp.s
 
+src/EtudiantDao.o: src/EtudiantDao.cpp.o
+.PHONY : src/EtudiantDao.o
+
+# target to build an object file
+src/EtudiantDao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/EtudiantDao.cpp.o
+.PHONY : src/EtudiantDao.cpp.o
+
+src/EtudiantDao.i: src/EtudiantDao.cpp.i
+.PHONY : src/EtudiantDao.i
+
+# target to preprocess a source file
+src/EtudiantDao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/EtudiantDao.cpp.i
+.PHONY : src/EtudiantDao.cpp.i
+
+src/EtudiantDao.s: src/EtudiantDao.cpp.s
+.PHONY : src/EtudiantDao.s
+
+# target to generate assembly for a file
+src/EtudiantDao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/EtudiantDao.cpp.s
+.PHONY : src/EtudiantDao.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... exec"
+	@echo "... home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.o"
+	@echo "... home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.i"
+	@echo "... home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... src/DatabaseManager.o"
 	@echo "... src/DatabaseManager.i"
 	@echo "... src/DatabaseManager.s"
+	@echo "... src/EtudiantDao.o"
+	@echo "... src/EtudiantDao.i"
+	@echo "... src/EtudiantDao.s"
 .PHONY : help
 
 
