@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./../generated/Ecole.hh"
+#include "./../../generated/Ecole.hh"
 
 class Etudiant_i : public virtual POA_Ecole::Etudiant{
     private:

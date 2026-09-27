@@ -1,0 +1,1 @@
+g++ main.cpp -o mon_programme -lmysqlcppconn
