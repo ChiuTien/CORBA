@@ -15,11 +15,14 @@ int main(int argc, char* argv[]) {
 
     EtudiantDao* etu = new EtudiantDao();
 
-    Ecole::InfoEtudiant info;
-    info.nom = CORBA::string_dup("CHIU TIEN");
-    info.prenom = CORBA::string_dup("MANDRESY CHRISTIAN");
+    Ecole::ListeEtudiants_var liste = etu->obtenirTousLesEtudiants();
 
-    etu->supprimerEtudiant(1);
+    std::cout << "Nombre d'étudiants trouvés : " << liste->length() << std::endl;
+
+    for (CORBA::ULong i = 0; i < liste->length(); i++) {
+        std::cout << "- " << liste[i].num << " : " 
+        << liste[i].nom << " " << liste[i].prenom << std::endl;
+    }
 
     delete etu;
 
