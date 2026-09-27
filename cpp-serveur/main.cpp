@@ -3,12 +3,14 @@
 #include <omniORB4/CORBA.h>
 #include <omniORB4/Naming.hh> 
 
-#include "./include/Etudiant_i.h"
+#include "./include/DatabaseManager.h"
+
+#include <iostream>
 
 void lancementServeur(int argc, char* argv[]);
 
 int main(int argc, char* argv[]) {
-    lancementServeur(argc, argv);
+    std::cout << "HELLO WORLD !" << std::endl;
     return 0;
 }
 
@@ -26,10 +28,10 @@ void lancementServeur(int argc, char* argv[]) {
         pman->activate();
 
         //INSTANCIATION DU SERVANT
-        Etudiant_i* servant = new Etudiant_i();
+        // Etudiant_i* servant = new Etudiant_i();
 
         //ACTIVATION DU SERVANT ET RECUPERATION DE LA REFERENCE D'OBJET CORBA
-        Ecole::Etudiant_var etudiant_ref = servant->_this();
+        // Ecole::Etudiant_var etudiant_ref = servant->_this();
 
         //ENREGISTREMENT DE L'OBJET DANS LE NAMINGSERVICE
         CORBA::Object_var objNaming = orb->resolve_initial_references("NameService");
@@ -47,7 +49,7 @@ void lancementServeur(int argc, char* argv[]) {
         name[0].kind = CORBA::string_dup("");
 
         //ASSOCIATION DU NOM A LA REFERENCE CORBA
-        namingContext->rebind(name, etudiant_ref);
+        // namingContext->rebind(name, etudiant_ref);
 
         std::cout << "[SERVEUR] Serveur CORBA initialise et enregistre sous 'ServiceEtudiant'." << std::endl;
         std::cout << "[SERVEUR] En attente des requetes des clients..." << std::endl;

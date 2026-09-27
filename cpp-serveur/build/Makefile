@@ -129,30 +129,6 @@ exec/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/build
 .PHONY : exec/fast
 
-home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.o: home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
-.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.o
-
-# target to build an object file
-home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
-.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
-
-home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.i: home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
-.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.i
-
-# target to preprocess a source file
-home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
-.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
-
-home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.s: home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
-.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.s
-
-# target to generate assembly for a file
-home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
-.PHONY : home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -177,29 +153,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Etudiant_i.o: src/Etudiant_i.cpp.o
-.PHONY : src/Etudiant_i.o
+src/DatabaseManager.o: src/DatabaseManager.cpp.o
+.PHONY : src/DatabaseManager.o
 
 # target to build an object file
-src/Etudiant_i.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/Etudiant_i.cpp.o
-.PHONY : src/Etudiant_i.cpp.o
+src/DatabaseManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/DatabaseManager.cpp.o
+.PHONY : src/DatabaseManager.cpp.o
 
-src/Etudiant_i.i: src/Etudiant_i.cpp.i
-.PHONY : src/Etudiant_i.i
+src/DatabaseManager.i: src/DatabaseManager.cpp.i
+.PHONY : src/DatabaseManager.i
 
 # target to preprocess a source file
-src/Etudiant_i.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/Etudiant_i.cpp.i
-.PHONY : src/Etudiant_i.cpp.i
+src/DatabaseManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/DatabaseManager.cpp.i
+.PHONY : src/DatabaseManager.cpp.i
 
-src/Etudiant_i.s: src/Etudiant_i.cpp.s
-.PHONY : src/Etudiant_i.s
+src/DatabaseManager.s: src/DatabaseManager.cpp.s
+.PHONY : src/DatabaseManager.s
 
 # target to generate assembly for a file
-src/Etudiant_i.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/Etudiant_i.cpp.s
-.PHONY : src/Etudiant_i.cpp.s
+src/DatabaseManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/src/DatabaseManager.cpp.s
+.PHONY : src/DatabaseManager.cpp.s
 
 # Help Target
 help:
@@ -210,15 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... exec"
-	@echo "... home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.o"
-	@echo "... home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.i"
-	@echo "... home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Etudiant_i.o"
-	@echo "... src/Etudiant_i.i"
-	@echo "... src/Etudiant_i.s"
+	@echo "... src/DatabaseManager.o"
+	@echo "... src/DatabaseManager.i"
+	@echo "... src/DatabaseManager.s"
 .PHONY : help
 
 

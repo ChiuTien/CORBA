@@ -225,6 +225,9 @@ CPP-SERVEUR_IS_TOP_LEVEL:STATIC=ON
 CPP-SERVEUR_SOURCE_DIR:STATIC=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur
 
 //Path to a library.
+MYSQL_CPPCONN_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
+
+//Path to a library.
 OMNIDYNAMIC4_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libomniDynamic4.so
 
 //Path to a library.
