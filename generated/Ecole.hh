@@ -76,6 +76,157 @@ _CORBA_MODULE_BEG
 
   typedef _CORBA_ConstrType_Variable_OUT_arg< InfoEtudiant,InfoEtudiant_var > InfoEtudiant_out;
 
+  class ListeEtudiants_var;
+
+  class ListeEtudiants : public _CORBA_Unbounded_Sequence< InfoEtudiant >  {
+  public:
+    typedef ListeEtudiants_var _var_type;
+    inline ListeEtudiants() {}
+    inline ListeEtudiants(const ListeEtudiants& _s)
+      : _CORBA_Unbounded_Sequence< InfoEtudiant > (_s) {}
+
+    inline ListeEtudiants(_CORBA_ULong _max)
+      : _CORBA_Unbounded_Sequence< InfoEtudiant > (_max) {}
+    inline ListeEtudiants(_CORBA_ULong _max, _CORBA_ULong _len, InfoEtudiant* _val, _CORBA_Boolean _rel=0)
+      : _CORBA_Unbounded_Sequence< InfoEtudiant > (_max, _len, _val, _rel) {}
+
+  
+
+    inline ListeEtudiants& operator = (const ListeEtudiants& _s) {
+      _CORBA_Unbounded_Sequence< InfoEtudiant > ::operator=(_s);
+      return *this;
+    }
+  };
+
+  class ListeEtudiants_out;
+
+  class ListeEtudiants_var {
+  public:
+    inline ListeEtudiants_var() : _pd_seq(0) {}
+    inline ListeEtudiants_var(ListeEtudiants* _s) : _pd_seq(_s) {}
+    inline ListeEtudiants_var(const ListeEtudiants_var& _s) {
+      if (_s._pd_seq)  _pd_seq = new ListeEtudiants(*_s._pd_seq);
+      else             _pd_seq = 0;
+    }
+    inline ~ListeEtudiants_var() { if (_pd_seq)  delete _pd_seq; }
+      
+    inline ListeEtudiants_var& operator = (ListeEtudiants* _s) {
+      if (_pd_seq)  delete _pd_seq;
+      _pd_seq = _s;
+      return *this;
+    }
+    inline ListeEtudiants_var& operator = (const ListeEtudiants_var& _s) {
+      if (&_s != this) {
+        if (_s._pd_seq) {
+          if (!_pd_seq)  _pd_seq = new ListeEtudiants;
+          *_pd_seq = *_s._pd_seq;
+        }
+        else if (_pd_seq) {
+          delete _pd_seq;
+          _pd_seq = 0;
+        }
+      }
+      return *this;
+    }
+    inline InfoEtudiant& operator [] (_CORBA_ULong _s) {
+      return (*_pd_seq)[_s];
+    }
+
+  
+
+    inline ListeEtudiants* operator -> () { return _pd_seq; }
+    inline const ListeEtudiants* operator -> () const { return _pd_seq; }
+#if defined(__GNUG__)
+    inline operator ListeEtudiants& () const { return *_pd_seq; }
+#else
+    inline operator const ListeEtudiants& () const { return *_pd_seq; }
+    inline operator ListeEtudiants& () { return *_pd_seq; }
+#endif
+      
+    inline const ListeEtudiants& in() const { return *_pd_seq; }
+    inline ListeEtudiants&       inout()    { return *_pd_seq; }
+    inline ListeEtudiants*&      out() {
+      if (_pd_seq) { delete _pd_seq; _pd_seq = 0; }
+      return _pd_seq;
+    }
+    inline ListeEtudiants* _retn() { ListeEtudiants* tmp = _pd_seq; _pd_seq = 0; return tmp; }
+      
+    friend class ListeEtudiants_out;
+    
+  private:
+    ListeEtudiants* _pd_seq;
+  };
+
+  class ListeEtudiants_out {
+  public:
+    inline ListeEtudiants_out(ListeEtudiants*& _s) : _data(_s) { _data = 0; }
+    inline ListeEtudiants_out(ListeEtudiants_var& _s)
+      : _data(_s._pd_seq) { _s = (ListeEtudiants*) 0; }
+    inline ListeEtudiants_out(const ListeEtudiants_out& _s) : _data(_s._data) {}
+    inline ListeEtudiants_out& operator = (const ListeEtudiants_out& _s) {
+      _data = _s._data;
+      return *this;
+    }
+    inline ListeEtudiants_out& operator = (ListeEtudiants* _s) {
+      _data = _s;
+      return *this;
+    }
+    inline operator ListeEtudiants*&()  { return _data; }
+    inline ListeEtudiants*& ptr()       { return _data; }
+    inline ListeEtudiants* operator->() { return _data; }
+
+    inline InfoEtudiant& operator [] (_CORBA_ULong _i) {
+      return (*_data)[_i];
+    }
+
+  
+
+    ListeEtudiants*& _data;
+
+  private:
+    ListeEtudiants_out();
+    ListeEtudiants_out& operator=(const ListeEtudiants_var&);
+  };
+
+  class EtudiantNonTrouver : public ::CORBA::UserException {
+  public:
+    
+    ::CORBA::String_member message;
+
+  
+
+    inline EtudiantNonTrouver() {
+      pd_insertToAnyFn    = insertToAnyFn;
+      pd_insertToAnyFnNCP = insertToAnyFnNCP;
+    }
+    EtudiantNonTrouver(const EtudiantNonTrouver&);
+    EtudiantNonTrouver(const char* i_message);
+    EtudiantNonTrouver& operator=(const EtudiantNonTrouver&);
+    virtual ~EtudiantNonTrouver();
+    virtual void _raise() const;
+    static EtudiantNonTrouver* _downcast(::CORBA::Exception*);
+    static const EtudiantNonTrouver* _downcast(const ::CORBA::Exception*);
+    static inline EtudiantNonTrouver* _narrow(::CORBA::Exception* _e) {
+      return _downcast(_e);
+    }
+    
+    void operator>>=(cdrStream&) const ;
+    void operator<<=(cdrStream&) ;
+
+    static _core_attr insertExceptionToAny    insertToAnyFn;
+    static _core_attr insertExceptionToAnyNCP insertToAnyFnNCP;
+
+    virtual ::CORBA::Exception* _NP_duplicate() const;
+
+    static _core_attr const char* _PD_repoId;
+    static _core_attr const char* _PD_typeId;
+
+  private:
+    virtual const char* _NP_typeId() const;
+    virtual const char* _NP_repoId(int*) const;
+    virtual void _NP_marshal(cdrStream&) const;
+  };
+
 #ifndef __Ecole_mEtudiant__
 #define __Ecole_mEtudiant__
   class Etudiant;
@@ -144,9 +295,10 @@ _CORBA_MODULE_BEG
   {
   public:
     // IDL operations
-    void creerEtudiant(const ::Ecole::InfoEtudiant& e);
-    void supprimerEtudiant(::CORBA::Long num);
-    InfoEtudiant* recupererEtudiant(::CORBA::Long num);
+    void sauvegarderEtudiant(const ::Ecole::InfoEtudiant& e);
+    void supprimerEtudiant(::CORBA::Long numero);
+    InfoEtudiant* obtenirEtudiant(::CORBA::Long numere);
+    ListeEtudiants* obtenirTousLesEtudiants();
 
     // Constructors
     inline _objref_Etudiant()  { _PR_setobj(0); }  // nil
@@ -181,9 +333,10 @@ _CORBA_MODULE_BEG
   public:
     virtual ~_impl_Etudiant();
 
-    virtual void creerEtudiant(const ::Ecole::InfoEtudiant& e) = 0;
-    virtual void supprimerEtudiant(::CORBA::Long num) = 0;
-    virtual InfoEtudiant* recupererEtudiant(::CORBA::Long num) = 0;
+    virtual void sauvegarderEtudiant(const ::Ecole::InfoEtudiant& e) = 0;
+    virtual void supprimerEtudiant(::CORBA::Long numero) = 0;
+    virtual InfoEtudiant* obtenirEtudiant(::CORBA::Long numere) = 0;
+    virtual ListeEtudiants* obtenirTousLesEtudiants() = 0;
     
   public:  // Really protected, workaround for xlC
     virtual _CORBA_Boolean _dispatch(omniCallHandle&);

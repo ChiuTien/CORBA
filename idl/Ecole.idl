@@ -6,10 +6,19 @@ module Ecole {
         string prenom;
     };
 
+    typedef sequence<InfoEtudiant> ListeEtudiants;
+
+    exception EtudiantNonTrouver {
+        string message;
+    };
+
     interface Etudiant {
-        void creerEtudiant(in InfoEtudiant e);
-        void supprimerEtudiant(in long num);
-        InfoEtudiant recupererEtudiant(in long num);
+        void sauvegarderEtudiant(in InfoEtudiant e);
+        void supprimerEtudiant(in long numero) raises (EtudiantNonTrouver);
+
+        InfoEtudiant obtenirEtudiant(in long numere) raises (EtudiantNonTrouver);
+
+        ListeEtudiants obtenirTousLesEtudiants();
     };
 
 };
