@@ -13,28 +13,27 @@ int main(int argc, char* argv[]) {
         CosNaming::NamingContext_var nameContexte = CosNaming::NamingContext::_narrow(objName);
 
         if(CORBA::is_nil(nameContexte)) {
-            std::cout << "[CLIENT] Impossible de trouver le name contexte " << std::endl;
+            std::cout << "[CLIENT] Impossible de trouver le name contexte" << std::endl;
             return 1;
         }
 
-        CosNaming::Name name;
-        name.length(1);
-        name[0].id = CORBA::string_dup("EtudiantService");
-        name[0].kind = CORBA::string_dup("");
+        CosNaming::Name nameEtudiant;
+        nameEtudiant.length(1);
+        nameEtudiant[0].id = CORBA::string_dup("EtudiantService");
+        nameEtudiant[0].kind = CORBA::string_dup("");
 
-        CORBA::Object_var objEtudiant = nameContexte->resolve(name);
+        CORBA::Object_var objEtudiant = nameContexte->resolve(nameEtudiant);
         Ecole::Etudiant_var etudiant = Ecole::Etudiant::_narrow(objEtudiant);
 
-        Ecole::ListeEtudiants_var liste = etudiant->obtenirTousLesEtudiants();
+        Ecole::InfoEtudiant info;
+        info.nom = CORBA::string_dup("NY AVO");
+        info.prenom = CORBA::string_dup("PD");
 
-        for(CORBA::ULong i = 0; i < liste->length(); i++) {
-            std::cout << "Numero: " << liste[i].num << " ; Nom: " << liste[i].nom << " ; Prenom: " << liste[i].prenom << std::endl;
-        }
+        etudiant->sauvegarderEtudiant(info);
 
-    } catch (CORBA::Exception& e) {
-        std::cerr << "[CLIENT] " << e._rep_id() << std::endl;
+    } catch (CORBA::Exception& ex) {
+        std::cerr << "[CLIENT] " << ex._rep_id() << std::endl;
     }
-    return 0;
 }
 
 void testClient(int argc, char* argv[]) {
