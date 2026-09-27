@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp
+CMAKE_SOURCE_DIR = /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build
+CMAKE_BINARY_DIR = /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/exec.dir/depend.make
@@ -69,58 +69,58 @@ include CMakeFiles/exec.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/exec.dir/flags.make
 
-CMakeFiles/exec.dir/generated/EcoleSK.cc.o: CMakeFiles/exec.dir/flags.make
-CMakeFiles/exec.dir/generated/EcoleSK.cc.o: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/generated/EcoleSK.cc
-CMakeFiles/exec.dir/generated/EcoleSK.cc.o: CMakeFiles/exec.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exec.dir/generated/EcoleSK.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exec.dir/generated/EcoleSK.cc.o -MF CMakeFiles/exec.dir/generated/EcoleSK.cc.o.d -o CMakeFiles/exec.dir/generated/EcoleSK.cc.o -c /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/generated/EcoleSK.cc
+CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o: CMakeFiles/exec.dir/flags.make
+CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc
+CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o: CMakeFiles/exec.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o -MF CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o.d -o CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o -c /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc
 
-CMakeFiles/exec.dir/generated/EcoleSK.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exec.dir/generated/EcoleSK.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/generated/EcoleSK.cc > CMakeFiles/exec.dir/generated/EcoleSK.cc.i
+CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc > CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.i
 
-CMakeFiles/exec.dir/generated/EcoleSK.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exec.dir/generated/EcoleSK.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/generated/EcoleSK.cc -o CMakeFiles/exec.dir/generated/EcoleSK.cc.s
+CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc -o CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.s
 
 CMakeFiles/exec.dir/src/Etudiant_i.cpp.o: CMakeFiles/exec.dir/flags.make
-CMakeFiles/exec.dir/src/Etudiant_i.cpp.o: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/src/Etudiant_i.cpp
+CMakeFiles/exec.dir/src/Etudiant_i.cpp.o: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/src/Etudiant_i.cpp
 CMakeFiles/exec.dir/src/Etudiant_i.cpp.o: CMakeFiles/exec.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exec.dir/src/Etudiant_i.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exec.dir/src/Etudiant_i.cpp.o -MF CMakeFiles/exec.dir/src/Etudiant_i.cpp.o.d -o CMakeFiles/exec.dir/src/Etudiant_i.cpp.o -c /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/src/Etudiant_i.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exec.dir/src/Etudiant_i.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exec.dir/src/Etudiant_i.cpp.o -MF CMakeFiles/exec.dir/src/Etudiant_i.cpp.o.d -o CMakeFiles/exec.dir/src/Etudiant_i.cpp.o -c /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/src/Etudiant_i.cpp
 
 CMakeFiles/exec.dir/src/Etudiant_i.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exec.dir/src/Etudiant_i.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/src/Etudiant_i.cpp > CMakeFiles/exec.dir/src/Etudiant_i.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/src/Etudiant_i.cpp > CMakeFiles/exec.dir/src/Etudiant_i.cpp.i
 
 CMakeFiles/exec.dir/src/Etudiant_i.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exec.dir/src/Etudiant_i.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/src/Etudiant_i.cpp -o CMakeFiles/exec.dir/src/Etudiant_i.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/src/Etudiant_i.cpp -o CMakeFiles/exec.dir/src/Etudiant_i.cpp.s
 
 CMakeFiles/exec.dir/main.cpp.o: CMakeFiles/exec.dir/flags.make
-CMakeFiles/exec.dir/main.cpp.o: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/main.cpp
+CMakeFiles/exec.dir/main.cpp.o: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/main.cpp
 CMakeFiles/exec.dir/main.cpp.o: CMakeFiles/exec.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exec.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exec.dir/main.cpp.o -MF CMakeFiles/exec.dir/main.cpp.o.d -o CMakeFiles/exec.dir/main.cpp.o -c /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exec.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exec.dir/main.cpp.o -MF CMakeFiles/exec.dir/main.cpp.o.d -o CMakeFiles/exec.dir/main.cpp.o -c /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/main.cpp
 
 CMakeFiles/exec.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exec.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/main.cpp > CMakeFiles/exec.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/main.cpp > CMakeFiles/exec.dir/main.cpp.i
 
 CMakeFiles/exec.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exec.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/main.cpp -o CMakeFiles/exec.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/main.cpp -o CMakeFiles/exec.dir/main.cpp.s
 
 # Object files for target exec
 exec_OBJECTS = \
-"CMakeFiles/exec.dir/generated/EcoleSK.cc.o" \
+"CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o" \
 "CMakeFiles/exec.dir/src/Etudiant_i.cpp.o" \
 "CMakeFiles/exec.dir/main.cpp.o"
 
 # External object files for target exec
 exec_EXTERNAL_OBJECTS =
 
-exec: CMakeFiles/exec.dir/generated/EcoleSK.cc.o
+exec: CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o
 exec: CMakeFiles/exec.dir/src/Etudiant_i.cpp.o
 exec: CMakeFiles/exec.dir/main.cpp.o
 exec: CMakeFiles/exec.dir/build.make
@@ -128,7 +128,7 @@ exec: /usr/lib/x86_64-linux-gnu/libomniORB4.so
 exec: /usr/lib/x86_64-linux-gnu/libomnithread.so
 exec: /usr/lib/x86_64-linux-gnu/libomniDynamic4.so
 exec: CMakeFiles/exec.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable exec"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable exec"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exec.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +140,6 @@ CMakeFiles/exec.dir/clean:
 .PHONY : CMakeFiles/exec.dir/clean
 
 CMakeFiles/exec.dir/depend:
-	cd /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build/CMakeFiles/exec.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build/CMakeFiles/exec.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/exec.dir/depend
 

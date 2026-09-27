@@ -1,7 +1,7 @@
-CMakeFiles/exec.dir/generated/EcoleSK.cc.o: \
- /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/generated/EcoleSK.cc \
+CMakeFiles/exec.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o: \
+ /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc \
  /usr/include/stdc-predef.h \
- /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/generated/Ecole.hh \
+ /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/Ecole.hh \
  /usr/include/omniORB4/CORBA.h /usr/include/omniORB4/omniInternal.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/strings.h \
  /usr/include/features.h /usr/include/features-time64.h \

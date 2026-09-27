@@ -1,4 +1,4 @@
-# Install script for directory: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp
+# Install script for directory: /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

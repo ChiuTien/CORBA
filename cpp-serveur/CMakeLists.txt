@@ -9,11 +9,11 @@ find_library(OMNITHREAD_LIB NAMES omnithread REQUIRED)
 find_library(OMNIDYNAMIC4_LIB NAMES omniDynamic4 REQUIRED)
 
 set(HEADERS
-    generated/Ecole.hh
+    ../generated/Ecole.hh
     include/Etudiant_i.h)
 
 set(SOURCES
-    generated/EcoleSK.cc
+    ../generated/EcoleSK.cc
     src/Etudiant_i.cpp
     main.cpp)
 

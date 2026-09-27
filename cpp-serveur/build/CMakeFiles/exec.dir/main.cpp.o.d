@@ -1,5 +1,5 @@
 CMakeFiles/exec.dir/main.cpp.o: \
- /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/main.cpp \
+ /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -229,5 +229,5 @@ CMakeFiles/exec.dir/main.cpp.o: \
  /usr/include/omniORB4/corbaidl_poa.hh /usr/include/omniORB4/boxes_poa.hh \
  /usr/include/omniORB4/pollable_poa.hh /usr/include/omniORB4/boa.h \
  /usr/include/omniORB4/Naming.hh /usr/include/omniORB4/messaging.hh \
- /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/./include/Etudiant_i.h \
- /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp/./include/./../generated/Ecole.hh
+ /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/./include/Etudiant_i.h \
+ /home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/cpp-serveur/./include/./../../generated/Ecole.hh
