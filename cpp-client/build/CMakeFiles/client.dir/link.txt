@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/client.dir/home/chiu/Documents/ITU/L3/S5/Mr_Tahina/CORBA/generated/EcoleSK.cc.o CMakeFiles/client.dir/main.cpp.o -o client  /usr/lib/x86_64-linux-gnu/libomniORB4.so /usr/lib/x86_64-linux-gnu/libomnithread.so

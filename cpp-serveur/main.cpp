@@ -8,43 +8,8 @@
 void lancementServeur(int argc, char* argv[]);
 
 int main(int argc, char* argv[]) {
-    try {
-        CORBA::ORB_var orb = CORBA::ORB_init(argc, argv);
-
-        CORBA::Object_var objPOA = orb->resolve_initial_references("RootPOA");
-        PortableServer::POA_var poa = PortableServer::POA::_narrow(objPOA);
-
-        PortableServer::POAManager_var pmn = poa->the_POAManager();
-        pmn->activate();
-
-        CORBA::Object_var objNAME = orb->resolve_initial_references("NameService");
-        CosNaming::NamingContext_var nameContext = CosNaming::NamingContext::_narrow(objNAME);
-
-        if(CORBA::is_nil(nameContext)) {
-            std::cerr << "[SERVEUR] : Impossible d'obtenir le Name Context" << std::endl;
-        }
-
-        Etudiant_i* servant = new Etudiant_i();
-        Ecole::Etudiant_var ref_etu = servant->_this();
-
-        CosNaming::Name name;
-        name.length(1);
-        name[0].id = CORBA::string_dup("EtudiantService");
-        name[0].kind = CORBA::string_dup("");
-
-        nameContext->rebind(name, ref_etu);
-
-        std::cout << "[SERVEUR] : Lancement du serveur " << std::endl;
-
-        orb->run();
-
-        poa->destroy(true, true);
-        orb->destroy();
-
-    } catch (CORBA::Exception& ex) {
-        std::cerr << "[SERVEUR] " << ex._rep_id() << std::endl;
-        return 1;
-    }
+    lancementServeur(argc, argv);
+    return 0;
 }
 
 void lancementServeur(int argc, char* argv[]) {
