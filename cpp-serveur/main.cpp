@@ -13,18 +13,36 @@ void lancementServeur(int argc, char* argv[]);
 
 int main(int argc, char* argv[]) {
 
-    EtudiantDao* etu = new EtudiantDao();
+    CORBA::ORB_var orb = CORBA::ORB_init(argc, argv);
 
-    Ecole::ListeEtudiants_var liste = etu->obtenirTousLesEtudiants();
+    CORBA::Object_var objPOA = orb->resolve_initial_references("RootPOA");
+    PortableServer::POA_var poa = PortableServer::POA::_narrow(objPOA);
 
-    std::cout << "Nombre d'étudiants trouvés : " << liste->length() << std::endl;
+    PortableServer::POAManager_var pmn = poa->the_POAManager();
+    pmn->activate();
 
-    for (CORBA::ULong i = 0; i < liste->length(); i++) {
-        std::cout << "- " << liste[i].num << " : " 
-        << liste[i].nom << " " << liste[i].prenom << std::endl;
+    CORBA::Object_var objName = orb->resolve_initial_references("NameService");
+    CosNaming::NamingContext_var contextName = CosNaming::NamingContext::_narrow(objName);
+
+    if(CORBA::is_nil(contextName)) {
+        std::cout << "[SERVEUR] Impossible de trouver le context name" << std::endl;
+        return 1;
     }
 
-    delete etu;
+    EtudiantDao* etu_serv = new EtudiantDao();
+    Ecole::Etudiant_var etut_ref = etu_serv->_this();
+
+    CosNaming::Name name;
+    name.length(1);
+    name[0].id = CORBA::string_dup("EtudiantService");
+    name[0].kind = CORBA::string_dup("");
+
+    contextName->rebind(name,etut_ref);
+
+    orb->run();
+
+    poa->destroy(true, true);
+    orb->destroy();
 
     return 0;
 }
