@@ -19,13 +19,14 @@ int main(int argc, char* argv[]) {
 
         CosNaming::Name nameEtudiant;
         nameEtudiant.length(1);
-        nameEtudiant[0].id = CORBA::string_dup("EtudiantService");
+        nameEtudiant[0].id = CORBA::string_dup("EtudiantServiceJava");
         nameEtudiant[0].kind = CORBA::string_dup("");
 
         CORBA::Object_var objEtudiant = nameContexte->resolve(nameEtudiant);
         Ecole::Etudiant_var etudiant = Ecole::Etudiant::_narrow(objEtudiant);
 
         Ecole::InfoEtudiant info;
+        info.num = 50;
         info.nom = CORBA::string_dup("NY AVO");
         info.prenom = CORBA::string_dup("PD");
 
