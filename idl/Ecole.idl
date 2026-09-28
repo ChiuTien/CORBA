@@ -15,6 +15,7 @@ module Ecole {
     interface Etudiant {
         void sauvegarderEtudiant(in InfoEtudiant e);
         void supprimerEtudiant(in long numero) raises (EtudiantNonTrouver);
+        void modifierEtudiant(in InfoEtudiant e, in long numero) raises (EtudiantNonTrouver);
 
         InfoEtudiant obtenirEtudiant(in long numere) raises (EtudiantNonTrouver);
 

@@ -20,7 +20,7 @@ public class Main {
             System.out.println("[CLIENT JAVA] Connexion au NameService réussie !");
 
             // 3. Résolution du service "EtudiantService" enregistré par le serveur C++
-            String name = "EtudiantServiceJava";
+            String name = "EtudiantService";
             Etudiant etudiantService = EtudiantHelper.narrow(ncRef.resolve_str(name));
 
             if (etudiantService == null) {
@@ -36,9 +36,12 @@ public class Main {
             nouvelEtudiant.nom = "CHIU TIEN";
             nouvelEtudiant.prenom = "MANDRESY";
 
-            System.out.println("\n[CLIENT JAVA] Envoi de l'étudiant...");
-            etudiantService.sauvegarderEtudiant(nouvelEtudiant);
-            System.out.println("[CLIENT JAVA] Sauvegarde effectuée !");
+            InfoEtudiant modif = new InfoEtudiant();
+            modif.num = 001;
+            modif.nom = "CT";
+            modif.prenom = "MC";
+
+            etudiantService.modifierEtudiant(modif,2);
 
             // --- TEST 2 : Récupération ---
             System.out.println("\n[CLIENT JAVA] Récupération de la liste...");

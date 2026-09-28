@@ -297,6 +297,7 @@ _CORBA_MODULE_BEG
     // IDL operations
     void sauvegarderEtudiant(const ::Ecole::InfoEtudiant& e);
     void supprimerEtudiant(::CORBA::Long numero);
+    void modifierEtudiant(const ::Ecole::InfoEtudiant& e, ::CORBA::Long numero);
     InfoEtudiant* obtenirEtudiant(::CORBA::Long numere);
     ListeEtudiants* obtenirTousLesEtudiants();
 
@@ -335,6 +336,7 @@ _CORBA_MODULE_BEG
 
     virtual void sauvegarderEtudiant(const ::Ecole::InfoEtudiant& e) = 0;
     virtual void supprimerEtudiant(::CORBA::Long numero) = 0;
+    virtual void modifierEtudiant(const ::Ecole::InfoEtudiant& e, ::CORBA::Long numero) = 0;
     virtual InfoEtudiant* obtenirEtudiant(::CORBA::Long numere) = 0;
     virtual ListeEtudiants* obtenirTousLesEtudiants() = 0;
     

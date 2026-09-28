@@ -60,6 +60,26 @@ public class EtudiantServiceImpl extends EtudiantPOA {
         System.out.println("[SERVEUR JAVA] Étudiant N°" + numero + " supprimé du CSV.");
     }
 
+    @Override 
+    public  synchronized void modifierEtudiant(InfoEtudiant e, int numero) throws EtudiantNonTrouver {
+        List<InfoEtudiant> liste = lireTousDepuisCSV();
+        boolean trouver = false;
+
+        for(int i = 0; i < liste.size(); i++) {
+            if(liste.get(i).num == numero) {
+                liste.set(i, e);
+                trouver = true;
+                break;
+            }
+        }
+
+        if(!trouver) {
+            throw new EtudiantNonTrouver("Étudiant avec le numéro " + numero + " introuvable pour modification.");
+        }
+        ecrireTousDansCSV(liste);
+        System.out.println("[SERVEUR JAVA] Étudiant N°" + numero + " modifié dans le CSV.");
+    }
+
     @Override
     public synchronized InfoEtudiant obtenirEtudiant(int numere) throws EtudiantNonTrouver {
         List<InfoEtudiant> liste = lireTousDepuisCSV();

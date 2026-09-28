@@ -375,10 +375,10 @@ void Ecole::_objref_Etudiant::supprimerEtudiant(::CORBA::Long numero)
 
 
 //
-// Code for Ecole::Etudiant::obtenirEtudiant
+// Code for Ecole::Etudiant::modifierEtudiant
 
 // Proxy call descriptor class. Mangled signature:
-//  _cEcole_mInfoEtudiant_i_clong_e_cEcole_mEtudiantNonTrouver
+//  void_i_cEcole_mInfoEtudiant_i_clong_e_cEcole_mEtudiantNonTrouver
 class _0RL_cd_610a4b794afbcf30_40000000
   : public omniCallDescriptor
 {
@@ -392,38 +392,28 @@ public:
   void marshalArguments(cdrStream&);
   void unmarshalArguments(cdrStream&);
 
-  void unmarshalReturnedValues(cdrStream&);
-  void marshalReturnedValues(cdrStream&);
-  
+    
   void userException(cdrStream&, _OMNI_NS(IOP_C)*, const char*);
   static const char* const _user_exns[];
 
-  ::CORBA::Long arg_0;
-  Ecole::InfoEtudiant_var result;
+  Ecole::InfoEtudiant_var arg_0_;
+  const Ecole::InfoEtudiant* arg_0;
+  ::CORBA::Long arg_1;
 };
 
 void _0RL_cd_610a4b794afbcf30_40000000::marshalArguments(cdrStream& _n)
 {
-  arg_0 >>= _n;
+  (const Ecole::InfoEtudiant&) *arg_0 >>= _n;
+  arg_1 >>= _n;
 
 }
 
 void _0RL_cd_610a4b794afbcf30_40000000::unmarshalArguments(cdrStream& _n)
 {
-  (::CORBA::Long&)arg_0 <<= _n;
-
-}
-
-void _0RL_cd_610a4b794afbcf30_40000000::marshalReturnedValues(cdrStream& _n)
-{
-  (const Ecole::InfoEtudiant&) result >>= _n;
-
-}
-
-void _0RL_cd_610a4b794afbcf30_40000000::unmarshalReturnedValues(cdrStream& _n)
-{
-  result = new Ecole::InfoEtudiant;
-  (Ecole::InfoEtudiant&)result <<= _n;
+  arg_0_ = new Ecole::InfoEtudiant;
+  (Ecole::InfoEtudiant&)arg_0_ <<= _n;
+  arg_0 = &arg_0_.in();
+  (::CORBA::Long&)arg_1 <<= _n;
 
 }
 
@@ -455,6 +445,119 @@ _0RL_lcfn_610a4b794afbcf30_50000000(omniCallDescriptor* cd, omniServant* svnt)
   _0RL_cd_610a4b794afbcf30_40000000* tcd = (_0RL_cd_610a4b794afbcf30_40000000*)cd;
   Ecole::_impl_Etudiant* impl = (Ecole::_impl_Etudiant*) svnt->_ptrToInterface(Ecole::Etudiant::_PD_repoId);
 #ifdef OMNI_HAS_Cplusplus_catch_exception_by_base
+  impl->modifierEtudiant(*tcd->arg_0, tcd->arg_1);
+#else
+  if (!cd->is_upcall())
+    impl->modifierEtudiant(*tcd->arg_0, tcd->arg_1);
+  else {
+    try {
+      impl->modifierEtudiant(*tcd->arg_0, tcd->arg_1);
+    }
+    catch(Ecole::EtudiantNonTrouver& ex) {
+      throw omniORB::StubUserException(ex._NP_duplicate());
+    }
+
+
+  }
+#endif
+
+
+}
+
+void Ecole::_objref_Etudiant::modifierEtudiant(const ::Ecole::InfoEtudiant& e, ::CORBA::Long numero)
+{
+  _0RL_cd_610a4b794afbcf30_40000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_50000000, "modifierEtudiant", 17);
+  _call_desc.arg_0 = &(::Ecole::InfoEtudiant&) e;
+  _call_desc.arg_1 = numero;
+
+  _invoke(_call_desc);
+
+
+
+}
+
+
+//
+// Code for Ecole::Etudiant::obtenirEtudiant
+
+// Proxy call descriptor class. Mangled signature:
+//  _cEcole_mInfoEtudiant_i_clong_e_cEcole_mEtudiantNonTrouver
+class _0RL_cd_610a4b794afbcf30_60000000
+  : public omniCallDescriptor
+{
+public:
+  inline _0RL_cd_610a4b794afbcf30_60000000(LocalCallFn lcfn, const char* op_, size_t oplen, _CORBA_Boolean upcall=0)
+    : omniCallDescriptor(lcfn, op_, oplen, 0, _user_exns, 1, upcall)
+  {
+    
+  }
+  
+  void marshalArguments(cdrStream&);
+  void unmarshalArguments(cdrStream&);
+
+  void unmarshalReturnedValues(cdrStream&);
+  void marshalReturnedValues(cdrStream&);
+  
+  void userException(cdrStream&, _OMNI_NS(IOP_C)*, const char*);
+  static const char* const _user_exns[];
+
+  ::CORBA::Long arg_0;
+  Ecole::InfoEtudiant_var result;
+};
+
+void _0RL_cd_610a4b794afbcf30_60000000::marshalArguments(cdrStream& _n)
+{
+  arg_0 >>= _n;
+
+}
+
+void _0RL_cd_610a4b794afbcf30_60000000::unmarshalArguments(cdrStream& _n)
+{
+  (::CORBA::Long&)arg_0 <<= _n;
+
+}
+
+void _0RL_cd_610a4b794afbcf30_60000000::marshalReturnedValues(cdrStream& _n)
+{
+  (const Ecole::InfoEtudiant&) result >>= _n;
+
+}
+
+void _0RL_cd_610a4b794afbcf30_60000000::unmarshalReturnedValues(cdrStream& _n)
+{
+  result = new Ecole::InfoEtudiant;
+  (Ecole::InfoEtudiant&)result <<= _n;
+
+}
+
+const char* const _0RL_cd_610a4b794afbcf30_60000000::_user_exns[] = {
+  Ecole::EtudiantNonTrouver::_PD_repoId
+};
+
+void _0RL_cd_610a4b794afbcf30_60000000::userException(cdrStream& s, _OMNI_NS(IOP_C)* iop_client, const char* repoId)
+{
+  if (omni::strMatch(repoId, Ecole::EtudiantNonTrouver::_PD_repoId)) {
+    Ecole::EtudiantNonTrouver _ex;
+    _ex <<= s;
+    if (iop_client) iop_client->RequestCompleted();
+    throw _ex;
+  }
+
+
+  else {
+    if (iop_client) iop_client->RequestCompleted(1);
+    OMNIORB_THROW(UNKNOWN,UNKNOWN_UserException,
+                  (::CORBA::CompletionStatus)s.completion());
+  }
+}
+
+// Local call call-back function.
+static void
+_0RL_lcfn_610a4b794afbcf30_70000000(omniCallDescriptor* cd, omniServant* svnt)
+{
+  _0RL_cd_610a4b794afbcf30_60000000* tcd = (_0RL_cd_610a4b794afbcf30_60000000*)cd;
+  Ecole::_impl_Etudiant* impl = (Ecole::_impl_Etudiant*) svnt->_ptrToInterface(Ecole::Etudiant::_PD_repoId);
+#ifdef OMNI_HAS_Cplusplus_catch_exception_by_base
   tcd->result = impl->obtenirEtudiant(tcd->arg_0);
 #else
   if (!cd->is_upcall())
@@ -476,7 +579,7 @@ _0RL_lcfn_610a4b794afbcf30_50000000(omniCallDescriptor* cd, omniServant* svnt)
 
 Ecole::InfoEtudiant* Ecole::_objref_Etudiant::obtenirEtudiant(::CORBA::Long numere)
 {
-  _0RL_cd_610a4b794afbcf30_40000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_50000000, "obtenirEtudiant", 16);
+  _0RL_cd_610a4b794afbcf30_60000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_70000000, "obtenirEtudiant", 16);
   _call_desc.arg_0 = numere;
 
   _invoke(_call_desc);
@@ -491,11 +594,11 @@ Ecole::InfoEtudiant* Ecole::_objref_Etudiant::obtenirEtudiant(::CORBA::Long nume
 
 // Proxy call descriptor class. Mangled signature:
 //  _cEcole_mListeEtudiants
-class _0RL_cd_610a4b794afbcf30_60000000
+class _0RL_cd_610a4b794afbcf30_80000000
   : public omniCallDescriptor
 {
 public:
-  inline _0RL_cd_610a4b794afbcf30_60000000(LocalCallFn lcfn, const char* op_, size_t oplen, _CORBA_Boolean upcall=0)
+  inline _0RL_cd_610a4b794afbcf30_80000000(LocalCallFn lcfn, const char* op_, size_t oplen, _CORBA_Boolean upcall=0)
     : omniCallDescriptor(lcfn, op_, oplen, 0, _user_exns, 0, upcall)
   {
     
@@ -511,28 +614,28 @@ public:
   Ecole::ListeEtudiants_var result;
 };
 
-void _0RL_cd_610a4b794afbcf30_60000000::marshalReturnedValues(cdrStream& _n)
+void _0RL_cd_610a4b794afbcf30_80000000::marshalReturnedValues(cdrStream& _n)
 {
   (const Ecole::ListeEtudiants&) result >>= _n;
 
 }
 
-void _0RL_cd_610a4b794afbcf30_60000000::unmarshalReturnedValues(cdrStream& _n)
+void _0RL_cd_610a4b794afbcf30_80000000::unmarshalReturnedValues(cdrStream& _n)
 {
   result = new Ecole::ListeEtudiants;
   (Ecole::ListeEtudiants&)result <<= _n;
 
 }
 
-const char* const _0RL_cd_610a4b794afbcf30_60000000::_user_exns[] = {
+const char* const _0RL_cd_610a4b794afbcf30_80000000::_user_exns[] = {
   0
 };
 
 // Local call call-back function.
 static void
-_0RL_lcfn_610a4b794afbcf30_70000000(omniCallDescriptor* cd, omniServant* svnt)
+_0RL_lcfn_610a4b794afbcf30_90000000(omniCallDescriptor* cd, omniServant* svnt)
 {
-  _0RL_cd_610a4b794afbcf30_60000000* tcd = (_0RL_cd_610a4b794afbcf30_60000000*)cd;
+  _0RL_cd_610a4b794afbcf30_80000000* tcd = (_0RL_cd_610a4b794afbcf30_80000000*)cd;
   Ecole::_impl_Etudiant* impl = (Ecole::_impl_Etudiant*) svnt->_ptrToInterface(Ecole::Etudiant::_PD_repoId);
   tcd->result = impl->obtenirTousLesEtudiants();
 
@@ -541,7 +644,7 @@ _0RL_lcfn_610a4b794afbcf30_70000000(omniCallDescriptor* cd, omniServant* svnt)
 
 Ecole::ListeEtudiants* Ecole::_objref_Etudiant::obtenirTousLesEtudiants()
 {
-  _0RL_cd_610a4b794afbcf30_60000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_70000000, "obtenirTousLesEtudiants", 24);
+  _0RL_cd_610a4b794afbcf30_80000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_90000000, "obtenirTousLesEtudiants", 24);
 
 
   _invoke(_call_desc);
@@ -595,9 +698,17 @@ Ecole::_impl_Etudiant::_dispatch(omniCallHandle& _handle)
     return 1;
   }
 
+  if (omni::strMatch(op, "modifierEtudiant")) {
+
+    _0RL_cd_610a4b794afbcf30_40000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_50000000, "modifierEtudiant", 17, 1);
+    
+    _handle.upcall(this,_call_desc);
+    return 1;
+  }
+
   if (omni::strMatch(op, "obtenirEtudiant")) {
 
-    _0RL_cd_610a4b794afbcf30_40000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_50000000, "obtenirEtudiant", 16, 1);
+    _0RL_cd_610a4b794afbcf30_60000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_70000000, "obtenirEtudiant", 16, 1);
     
     _handle.upcall(this,_call_desc);
     return 1;
@@ -605,7 +716,7 @@ Ecole::_impl_Etudiant::_dispatch(omniCallHandle& _handle)
 
   if (omni::strMatch(op, "obtenirTousLesEtudiants")) {
 
-    _0RL_cd_610a4b794afbcf30_60000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_70000000, "obtenirTousLesEtudiants", 24, 1);
+    _0RL_cd_610a4b794afbcf30_80000000 _call_desc(_0RL_lcfn_610a4b794afbcf30_90000000, "obtenirTousLesEtudiants", 24, 1);
     
     _handle.upcall(this,_call_desc);
     return 1;

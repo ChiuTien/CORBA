@@ -42,6 +42,24 @@ void EtudiantDao::supprimerEtudiant(CORBA::Long numero) {
     }
 }
 
+void EtudiantDao::modifierEtudiant(const Ecole::InfoEtudiant& e, CORBA::Long numero) {
+    try {
+        std::unique_ptr<sql::PreparedStatement> pmnt(
+            dbManager->getConnect()->prepareStatement("UPDATE etudiants SET nom=?, prenom=? WHERE num=?")
+        );
+        pmnt->setString(1,std::string(e.nom));
+        pmnt->setString(2,std::string(e.prenom));
+        pmnt->setInt(3,numero);
+
+        pmnt->executeUpdate();
+
+        pmnt->close();
+        dbManager->disconnect();
+    } catch (sql::SQLException& ex) {
+        std::cerr << "[BDD ERROR] Erreur modification: " << ex.what() << std::endl;
+    }
+}
+
 Ecole::InfoEtudiant* EtudiantDao::obtenirEtudiant(CORBA::Long numero) {
     Ecole::InfoEtudiant* etudiant = new Ecole::InfoEtudiant();
     try {
